@@ -1,0 +1,1 @@
+export {Spinner} from "shared/components/spinner"

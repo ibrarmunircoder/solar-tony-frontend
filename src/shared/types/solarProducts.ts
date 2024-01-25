@@ -1,0 +1,22 @@
+export type SolarPanelProduct = {
+  ASIN: string;
+  DetailPageURL: string;
+  Brand: string;
+  Manufacturer: string;
+  Model: string;
+  Color: string;
+  Height: string;
+  HeightUnit: string;
+  Length: string;
+  LengthUnit: string;
+  Width: string;
+  WidthLength: string;
+  Size: string;
+  NumberOfItems: string;
+  Title: string;
+  Availability: string;
+  Condition: string;
+  Price: string;
+  PriceWithCurrency: string;
+  Locale: string;
+};

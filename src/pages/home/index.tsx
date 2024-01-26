@@ -134,7 +134,7 @@ const Home = () => {
           </button>
         </fieldset>
       </div>
-      <div style={{ height: 500, width: "100%" }}>
+      <div style={{ minHeight: 500, width: "100%" }}>
         <StyledDataGrid
           loading={isLoading}
           getRowId={(row) => row._id}

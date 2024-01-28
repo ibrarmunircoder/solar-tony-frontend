@@ -147,7 +147,7 @@ const useSolarProducts = () => {
     }
     if (filter.min) {
       const newProducts = dataRef.current.filter(
-        (row) => parseFloat(row.Price) === parseFloat(filter.min),
+        (row) => parseFloat(row.Price) >= parseFloat(filter.min),
       );
       setPageInfo(() => ({
         rowCount: newProducts.length,
@@ -157,7 +157,7 @@ const useSolarProducts = () => {
     }
     if (filter.max) {
       const newProducts = dataRef.current.filter(
-        (row) => parseFloat(row.Price) === parseFloat(filter.max),
+        (row) => parseFloat(row.Price) <= parseFloat(filter.max),
       );
       setPageInfo(() => ({
         rowCount: newProducts.length,

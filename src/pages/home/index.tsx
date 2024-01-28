@@ -155,8 +155,7 @@ const Home = () => {
         the time of purchase will apply to the purchase of the product. CERTAIN
         CONTENT THAT APPEARS ON THIS SITE COMES FROM AMAZON SERVICES LLC. THIS
         CONTENT IS PROVIDED 'AS IS' AND IS SUBJECT TO CHANGE OR REMOVAL AT ANY
-        TIME. All other content is Copyright Legitimate Data Company, LLC. All
-        rights reserved.
+        TIME.
       </footer>
     </>
   );

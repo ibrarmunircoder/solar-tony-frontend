@@ -64,7 +64,7 @@ const Home = () => {
               Search
             </button>
           </fieldset>
-          <fieldset>
+          {/* <fieldset>
             <legend>Size</legend>
             <TextField
               sx={{
@@ -84,7 +84,7 @@ const Home = () => {
             >
               Search
             </button>
-          </fieldset>
+          </fieldset> */}
           <fieldset className="price">
             <legend>Price</legend>
             <span className="block">Under $100</span>

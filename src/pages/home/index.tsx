@@ -41,13 +41,56 @@ const Home = () => {
             Used
           </label>
         </fieldset>
+
+        <fieldset>
+          <legend>Brand</legend>
+          <TextField
+            sx={{
+              width: "100%",
+              "&  fieldset": {
+                width: "100%",
+              },
+            }}
+            name="brand"
+            onChange={handleOnChange}
+            placeholder="Brand"
+            size="small"
+          />
+          <button
+            onClick={handleBrandSearch}
+            className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
+          >
+            Search
+          </button>
+        </fieldset>
+        <fieldset>
+          <legend>Size</legend>
+          <TextField
+            sx={{
+              width: "100%",
+              "&  fieldset": {
+                width: "100%",
+              },
+            }}
+            placeholder="Size"
+            name="size"
+            onChange={handleOnChange}
+            size="small"
+          />
+          <button
+            onClick={handleSizeSearch}
+            className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
+          >
+            Search
+          </button>
+        </fieldset>
         <fieldset className="price">
           <legend>Price</legend>
-          <span className="block">Under $25</span>
-          <span className="block">$25 to $50</span>
-          <span className="block">$50 to $100</span>
-          <span className="block">$100 to $200</span>
-          <span className="block">$200 & Above</span>
+          <span className="block">Under $100</span>
+          <span className="block">$100 - $300</span>
+          <span className="block">$300 - $500</span>
+          <span className="block">$500 - $1000</span>
+          <span className="block">$1000 & Above</span>
           <div className="flex flex-wrap gap-2 mt-2">
             <TextField
               sx={{
@@ -86,48 +129,6 @@ const Home = () => {
           </div>
           <button
             onClick={handlePriceSearch}
-            className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
-          >
-            Search
-          </button>
-        </fieldset>
-        <fieldset>
-          <legend>Brand</legend>
-          <TextField
-            sx={{
-              width: "100%",
-              "&  fieldset": {
-                width: "100%",
-              },
-            }}
-            name="brand"
-            onChange={handleOnChange}
-            placeholder="Brand"
-            size="small"
-          />
-          <button
-            onClick={handleBrandSearch}
-            className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
-          >
-            Search
-          </button>
-        </fieldset>
-        <fieldset>
-          <legend>Size</legend>
-          <TextField
-            sx={{
-              width: "100%",
-              "&  fieldset": {
-                width: "100%",
-              },
-            }}
-            placeholder="Size"
-            name="size"
-            onChange={handleOnChange}
-            size="small"
-          />
-          <button
-            onClick={handleSizeSearch}
             className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
           >
             Search

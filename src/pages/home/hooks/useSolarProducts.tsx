@@ -170,7 +170,7 @@ const useSolarProducts = () => {
   const handleBrandSearch = () => {
     if (filter.brand) {
       const newProducts = dataRef.current.filter((row) =>
-        row.Brand.toLowerCase().startsWith(filter.brand),
+        row.Brand.toLowerCase().startsWith(filter.brand.toLowerCase()),
       );
       setPageInfo(() => ({
         rowCount: newProducts.length,

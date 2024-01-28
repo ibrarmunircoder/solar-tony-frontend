@@ -48,12 +48,12 @@ const Home = () => {
           <span className="block">$50 to $100</span>
           <span className="block">$100 to $200</span>
           <span className="block">$200 & Above</span>
-          <div className="flex gap-2 mt-2">
+          <div className="flex flex-wrap gap-2 mt-2">
             <TextField
               sx={{
-                width: "75px",
+                width: "100%",
                 "&  fieldset": {
-                  width: "75px",
+                  width: "100%",
                 },
               }}
               name="min"
@@ -68,9 +68,9 @@ const Home = () => {
             />
             <TextField
               sx={{
-                width: "75px",
+                width: "100%",
                 "&  fieldset": {
-                  width: "75px",
+                  width: "100%",
                 },
               }}
               name="max"
@@ -95,9 +95,9 @@ const Home = () => {
           <legend>Brand</legend>
           <TextField
             sx={{
-              width: "130px",
+              width: "100%",
               "&  fieldset": {
-                width: "130px",
+                width: "100%",
               },
             }}
             name="brand"
@@ -116,9 +116,9 @@ const Home = () => {
           <legend>Size</legend>
           <TextField
             sx={{
-              width: "130px",
+              width: "100%",
               "&  fieldset": {
-                width: "130px",
+                width: "100%",
               },
             }}
             placeholder="Size"

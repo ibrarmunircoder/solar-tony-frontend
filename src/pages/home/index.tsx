@@ -2,6 +2,7 @@ import { useSolarProducts } from "./hooks";
 import { StyledDataGrid } from "pages/home/home.styles";
 import TextField from "@mui/material/TextField";
 import { InputAdornment } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const {
@@ -14,13 +15,30 @@ const Home = () => {
     handleOnChange,
     handlePriceSearch,
     handleBrandSearch,
-    handleSizeSearch,
+    handleManufacturerSearch,
     handleConditionSearch,
+    handleClearSearch,
   } = useSolarProducts();
   return (
     <>
       <div className="flex p-3 gap-3">
         <div>
+          <button
+            onClick={handleClearSearch}
+            className="w-full text-white bg-black border-none rounded-md mt-2 shadow-md px-4 py-2 mb-8"
+          >
+            Clear Search
+          </button>
+          <fieldset className="condition" onChange={handleConditionSearch}>
+            <legend>Data source</legend>
+            <Link
+              style={{ color: "black" }}
+              className="font-semibold no-underline"
+              to={`/?locale=us`}
+            >
+              amazon.com
+            </Link>
+          </fieldset>
           <fieldset className="condition" onChange={handleConditionSearch}>
             <legend>Condition</legend>
             <label>
@@ -59,6 +77,27 @@ const Home = () => {
             />
             <button
               onClick={handleBrandSearch}
+              className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
+            >
+              Search
+            </button>
+          </fieldset>
+          <fieldset>
+            <legend>Manufacturer</legend>
+            <TextField
+              sx={{
+                width: "100%",
+                "&  fieldset": {
+                  width: "100%",
+                },
+              }}
+              name="manufacturer"
+              onChange={handleOnChange}
+              placeholder="Manufacturer"
+              size="small"
+            />
+            <button
+              onClick={handleManufacturerSearch}
               className="w-full border border-black rounded-md mt-2 border-solid px-4 py-2"
             >
               Search
@@ -134,6 +173,16 @@ const Home = () => {
             >
               Search
             </button>
+          </fieldset>
+          <fieldset id="links">
+            <ul>
+              <Link to="/faq">
+                <li>FAQ</li>
+              </Link>
+              <Link to="/privacy">
+                <li>Privacy policy</li>
+              </Link>
+            </ul>
           </fieldset>
         </div>
         <div style={{ minHeight: 500, width: "100%" }}>

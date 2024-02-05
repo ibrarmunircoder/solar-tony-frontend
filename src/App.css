@@ -31,3 +31,8 @@ input[type="checkbox" i] {
   padding: initial;
   border: initial;
 }
+
+a {
+  text-decoration: underline;
+  color: blue;
+}

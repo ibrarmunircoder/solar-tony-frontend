@@ -15,6 +15,11 @@ const columns: GridColDef[] = [
     disableColumnMenu: true,
     width: 90,
     filterable: false,
+    renderCell(params) {
+      return params.row.PriceWithCurrency === "N/A"
+        ? null
+        : params.row.PriceWithCurrency;
+    },
   },
 
   {
@@ -90,6 +95,7 @@ const useSolarProducts = () => {
     min: "",
     max: "",
     brand: "",
+    manufacturer: "",
     size: "",
   });
   const newConditionCheckboxRef = useRef<HTMLInputElement>(null);
@@ -120,6 +126,13 @@ const useSolarProducts = () => {
         setIsLoading(false);
       });
   }, []);
+
+  const handleClearSearch = () => {
+    setPageInfo(() => ({
+      rowCount: dataRef.current.length,
+      rows: dataRef.current,
+    }));
+  };
 
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
@@ -171,6 +184,19 @@ const useSolarProducts = () => {
     if (filter.brand) {
       const newProducts = dataRef.current.filter((row) =>
         row.Brand.toLowerCase().startsWith(filter.brand.toLowerCase()),
+      );
+      setPageInfo(() => ({
+        rowCount: newProducts.length,
+        rows: newProducts,
+      }));
+    }
+  };
+  const handleManufacturerSearch = () => {
+    if (filter.manufacturer) {
+      const newProducts = dataRef.current.filter((row) =>
+        row.Manufacturer.toLowerCase().startsWith(
+          filter.manufacturer.toLowerCase(),
+        ),
       );
       setPageInfo(() => ({
         rowCount: newProducts.length,
@@ -242,6 +268,8 @@ const useSolarProducts = () => {
     handleBrandSearch,
     handleSizeSearch,
     handleConditionSearch,
+    handleManufacturerSearch,
+    handleClearSearch,
   };
 };
 

@@ -199,13 +199,15 @@ const Home = () => {
       </div>
       <table style={{ display: "none" }}>
         <thead>
-          <th>Price</th>
-          <th>Brand</th>
-          <th>Condition</th>
-          <th>Color</th>
-          <th>Size</th>
-          <th>Manufacturer</th>
-          <th>Name</th>
+          <tr>
+            <th>Price</th>
+            <th>Brand</th>
+            <th>Condition</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Manufacturer</th>
+            <th>Name</th>
+          </tr>
         </thead>
         <tbody>
           {rows.map((row, index) => (

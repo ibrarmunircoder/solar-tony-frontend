@@ -48,7 +48,7 @@ const FAQ = () => {
         brand name, and condition (new or used) to find the perfect option for
         their requirements.
       </p>
-      <br />
+      {/* <br />
       <h2 className="text-2xl font-semibold">
         Can you add complex filters and sorting?
       </h2>
@@ -59,7 +59,7 @@ const FAQ = () => {
         analysis, try entering the following into{" "}
         <a href="https://docs.google.com/spreadsheets/">Google Sheets</a>:{" "}
         <code> =IMPORTHTML("https://smartsolarpricing.com/", "table")</code>
-      </p>
+      </p> */}
       <br />
       <h2 className="text-2xl font-semibold">
         Is there a fee to use SmartSolarPricing.com?

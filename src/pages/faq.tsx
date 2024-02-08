@@ -56,11 +56,9 @@ const FAQ = () => {
       <p>
         The intent of this site is to be a simple reference rather than a
         comprehensive search index. If you would like to do more complex
-        analysis, try entering the following into Google Sheets: =IMPORTHTML("
-        <a href="https://smartsolarpricing.com/" target="__blank">
-          https://smartsolarpricing.com/
-        </a>
-        ", "table")
+        analysis, try entering the following into{" "}
+        <a href="https://docs.google.com/spreadsheets/">Google Sheets</a>:{" "}
+        <code> =IMPORTHTML("https://smartsolarpricing.com/", "table")</code>
       </p>
       <br />
       <h2 className="text-2xl font-semibold">

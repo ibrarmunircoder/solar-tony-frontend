@@ -197,6 +197,30 @@ const Home = () => {
           />
         </div>
       </div>
+      <table style={{ display: "none" }}>
+        <thead>
+          <th>Price</th>
+          <th>Brand</th>
+          <th>Condition</th>
+          <th>Color</th>
+          <th>Size</th>
+          <th>Manufacturer</th>
+          <th>Name</th>
+        </thead>
+        <tbody>
+          {rows.map((row, index) => (
+            <tr key={index}>
+              <td>{row.Price}</td>
+              <td>{row.Brand}</td>
+              <td>{row.Condition}</td>
+              <td>{row.Color}</td>
+              <td>{row.Size}</td>
+              <td>{row.Manufacturer}</td>
+              <td>{row.Title}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <footer className="p-4 text-sm">
         As an Amazon Associate I earn from qualifying purchases. Product prices
         and availability are accurate as of the date/time indicated and are
